@@ -50,3 +50,33 @@ select(litter_df, litter_number, everything())
 relocate(litter_df, litter_number)
 ```
 
+## `filter`
+
+```{r}
+filter(litter_df, gd0_weight < 22)
+```
+
+```{r}
+filter(litter_df, gd0_weight >= 22)
+```
+
+```{r}
+filter(litter_df, gd_of_birth == 20)
+```
+
+```{r}
+filter(litter_df, !(gd_of_birth == 20))
+```
+
+```{r}
+filter(litter_df, gd0_weight >= 22, gd_of_birth == 20)
+```
+
+```{r}
+filter(litter_df, group == "Mod8")
+```
+
+# If want the combination of both names in the group
+```{r}
+filter(litter_df, group %in% c("Con7", "Mod8"))
+```
